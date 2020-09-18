@@ -22,9 +22,10 @@
 .sidebar__search {
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: white;
   height: 39px;
   padding: 10px;
+  margin-bottom: 5px;
 }
 .sidebar__search-container {
   display: flex;
@@ -44,4 +45,10 @@
   margin-left: 10px;
 }
 .sidebar__chats {
+  background-color: white;
+  flex: 1;
+  overflow-y: scroll;
+}
+.sidebar__chats::-webkit-scrollbar {
+  display: none;
 }
