@@ -11,24 +11,24 @@ function App() {
   const [{ user }, dispatch] = useStateValue();
 
   return (
-    <div className="app__body">
-      {!user ? (
-        <Login></Login>
-      ) : (
-        <div className="App">
+    <div className="App">
+      <div className="app__body">
+        {!user ? (
+          <Login></Login>
+        ) : (
           <Router>
             <Sidebar></Sidebar>
             <Switch>
               <Route exact path="/">
-                <Chat></Chat>
+                {/* <Chat></Chat> */}
               </Route>
               <Route path="/rooms/:roomId">
                 <Chat></Chat>
               </Route>
             </Switch>
           </Router>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
