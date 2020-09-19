@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import { Avatar, IconButton } from "@material-ui/core";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AttachFileOutlinedIcon from "@material-ui/icons/AttachFileOutlined";
@@ -10,6 +11,7 @@ import "./Chat.css";
 
 const Chat = () => {
   const [input, setInput] = useState("");
+  const { roomId } = useParams();
 
   const sendMessage = (e) => {
     e.preventDefault();

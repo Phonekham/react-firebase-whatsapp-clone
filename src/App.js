@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Chat from "./components/chat/Chat";
 
@@ -8,8 +9,17 @@ function App() {
   return (
     <div className="App">
       <div className="app__body">
-        <Sidebar></Sidebar>
-        <Chat></Chat>
+        <Router>
+          <Sidebar></Sidebar>
+          <Switch>
+            <Route exact path="/">
+              {/* <Chat></Chat> */}
+            </Route>
+            <Route path="/rooms/:roomId">
+              <Chat></Chat>
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </div>
   );
